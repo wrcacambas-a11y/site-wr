@@ -1,0 +1,73 @@
+<manifest alg="2" build="2017.0.2.363" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="www.wrcacambas.com.br" resolutions="1x" timestamp="1542484548334">
+  <folder name="css">
+    <file name="site_global.css" crc="4198153039"/>
+    <file name="index.css" crc="525911903" ref="index"/>
+    <file name="iefonts_index.css" crc="4288607943" ref="index"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index"/>
+    <file name="museutils.js" crc="4232573551" ref="index"/>
+    <file name="whatinput.js" crc="86476730" ref="index"/>
+    <file name="museconfig.js" crc="3849126041" ref="index"/>
+    <file name="jquery.musemenu.js" crc="38860304" ref="index"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="3880853905" ref="index"/>
+    <file name="jquery.watch.js" crc="3844535323" ref="index"/>
+    <file name="webpro.js" crc="3770351119" ref="index"/>
+    <file name="form_check.php" crc="3841221102" ref="index"/>
+    <file name="form_throttle.php" crc="4048049783" ref="index"/>
+    <file name="form_process.php" crc="3899230280" ref="index"/>
+    <file name="form-u1378.php" crc="85495120" ref="index"/>
+    <file name="musewpslideshow.js" crc="4244742588" ref="index"/>
+    <file name="jquery.museoverlay.js" crc="432750910" ref="index"/>
+    <file name="touchswipe.js" crc="3912873526" ref="index"/>
+    <file name="form-u463.php" crc="521637882" ref="index"/>
+    <file name="jquery.scrolleffects.js" crc="146279342" ref="index"/>
+    <file name="html5shiv.js" crc="4241844378" ref="index"/>
+    <file name="require.js" crc="4234670167" ref="index"/>
+  </folder>
+  <folder name="images">
+    <file name="favicon.ico" crc="325056933" ref="index"/>
+    <file name="blank.gif" crc="4208392903" ref="index"/>
+    <file name="u136_states.png" crc="3812682250" ref="index"/>
+    <file name="u136_states-r.png" crc="3812682250" ref="index"/>
+    <file name="u182.png" crc="479465141" ref="index"/>
+    <file name="u182-r.png" crc="173832262" ref="index"/>
+    <file name="u182-a.png" crc="173832262" ref="index"/>
+    <file name="u170.png" crc="271907171" ref="index"/>
+    <file name="u170-r.png" crc="3983098793" ref="index"/>
+    <file name="u170-a.png" crc="3983098793" ref="index"/>
+    <file name="u177.png" crc="310811482" ref="index"/>
+    <file name="u177-r.png" crc="4144163608" ref="index"/>
+    <file name="u177-a.png" crc="4144163608" ref="index"/>
+    <file name="foto00420032.jpg" crc="3910207749" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="bluebgtexture.jpg" crc="3979528531" ref="index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="foto00430.jpg" crc="222712976" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="foto00450-u457-fr.png" crc="3958917102" ref="index"/>
+    <file name="map-drop-down copy.png" crc="4035143912" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="email copy.png" crc="4220371064" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="mobile-3 copy.png" crc="3970738673" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="whatsapp logo.png" crc="4111074338" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="bandeiras.png" crc="487146758" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="cacamba.png" crc="3872967720" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+  </folder>
+  <file name="index.html" crc="3785573550" seo="true" mt="1542484542957" redirect="true"/>
+</manifest>

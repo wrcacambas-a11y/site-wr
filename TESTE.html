@@ -41,4 +41,282 @@
     }
 
     nav a {
-      margin-lef
+      margin-left: 30px;
+      text-decoration: none;
+      color: #002b7a;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    /* ====== HERO SECTION ====== */
+    .hero {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .hero-content {
+      background: rgba(0, 43, 122, 0.55);
+      padding: 40px;
+      border-radius: 15px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+    }
+
+    .hero button {
+      background-color: #ffd100;
+      color: #002b7a;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .hero button:hover {
+      background-color: #ffcc00;
+      transform: scale(1.05);
+    }
+
+    /* ====== SERVIÇOS ====== */
+    section {
+      padding: 100px 8% 60px;
+      text-align: center;
+    }
+
+    section h3 {
+      font-size: 2rem;
+      color: #002b7a;
+      margin-bottom: 40px;
+    }
+
+    .servicos {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .servico {
+      flex: 1;
+      min-width: 250px;
+      max-width: 300px;
+      background: #f8f9fa;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    .servico:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    .servico h4 {
+      color: #002b7a;
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+
+    .servico p {
+      color: #333;
+      margin-top: 10px;
+      font-size: 0.95rem;
+    }
+
+    /* ====== ORÇAMENTO ====== */
+    .orcamento {
+      background-color: #ffd100;
+      color: #002b7a;
+      padding: 60px 8%;
+      text-align: center;
+      animation: fadeIn 2s ease;
+    }
+
+    .orcamento h3 {
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+    }
+
+    .orcamento form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .orcamento input,
+    .orcamento select {
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      width: 250px;
+      font-size: 1rem;
+    }
+
+    .orcamento button {
+      padding: 12px 25px;
+      border: none;
+      background-color: #002b7a;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .orcamento button:hover {
+      background-color: #001f5c;
+    }
+
+    /* ====== WHATSAPP FLUTUANTE ====== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transition: transform 0.3s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    /* ====== RODAPÉ ====== */
+    footer {
+      background-color: #002b7a;
+      color: #fff;
+      text-align: center;
+      padding: 25px;
+      font-size: 0.9rem;
+    }
+
+    /* ====== ANIMAÇÕES ====== */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>WR CAÇAMBAS</h1>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#orcamento">Orçamento</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="./videos/VideoTopCompleto.mp4" type="video/mp4">
+      Seu navegador não suporta vídeos HTML5.
+    </video>
+    <div class="hero-content">
+      <h2>Locação de Caçambas em Belo Horizonte</h2>
+      <p>Desde 2001 oferecendo agilidade, segurança e responsabilidade no descarte de resíduos na região norte de BH.</p>
+      <button onclick="document.querySelector('#orcamento').scrollIntoView({behavior:'smooth'})">Peça seu Orçamento</button>
+    </div>
+  </section>
+
+  <section id="servicos">
+    <h3>Nossos Serviços</h3>
+    <div class="servicos">
+      <div class="servico">
+        <h4>Locação de Caçamba 5m³</h4>
+        <p>Caçambas padrão em Belo Horizonte, ideais para entulho, reformas, limpeza de quintais e obras.</p>
+      </div>
+      <div class="servico">
+        <h4>Atendimento Local</h4>
+        <p>Serviço rápido e eficiente em toda a região norte de Belo Horizonte. Entrega e retirada ágil.</p>
+      </div>
+      <div class="servico">
+        <h4>Orçamento Personalizado</h4>
+        <p>O valor depende do endereço e tipo de resíduo descartado. Solicite um orçamento sem compromisso!</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="orcamento" id="orcamento">
+    <h3>Peça seu Orçamento</h3>
+    <form>
+      <input type="text" placeholder="Nome" required>
+      <input type="text" placeholder="Endereço da obra" required>
+      <select required>
+        <option value="">Tipo de resíduo</option>
+        <option value="entulho">Entulho</option>
+        <option value="terra">Terra</option>
+        <option value="misto">Misto</option>
+      </select>
+      <input type="text" placeholder="Telefone / WhatsApp" required>
+      <button type="submit">Solicitar Orçamento</button>
+    </form>
+  </section>
+
+  <a href="https://wa.me/5531999999999?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20de%20caçamba." class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
+    💬
+  </a>
+
+  <footer>
+    © 2025 WR Caçambas LTDA — Todos os direitos reservados.
+  </footer>
+</body>
+</html>

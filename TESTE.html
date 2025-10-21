@@ -3,65 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WR Caçambas - Locação em Belo Horizonte</title>
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1006/1006771.png">
+  <title>WR Caçambas Ltda - Locação de Caçambas em Belo Horizonte</title>
   <style>
-    /* ====== ESTILO GERAL ====== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
+    :root {
+      --amarelo: #FFD100;
+      --azul: #002B7A;
+      --branco: #ffffff;
     }
 
     body {
-      background-color: #ffffff;
-      color: #002b7a;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--branco);
+      color: var(--azul);
       overflow-x: hidden;
     }
 
+    /* Cabeçalho */
     header {
-      background-color: #ffd100;
-      padding: 15px 8%;
+      background-color: var(--amarelo);
+      color: var(--azul);
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      position: fixed;
-      width: 100%;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
       top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      animation: fadeInDown 1s ease-in-out;
+      z-index: 100;
+      flex-wrap: wrap;
     }
 
-    header h1 {
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-weight: 900;
       font-size: 1.5rem;
-      color: #002b7a;
+    }
+
+    .logo span {
       font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .telefone {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--azul);
+      gap: 0.4rem;
+    }
+
+    .telefone img {
+      width: 20px;
+      height: 20px;
     }
 
     nav a {
-      margin-left: 30px;
+      color: var(--azul);
+      margin-left: 2rem;
       text-decoration: none;
-      color: #002b7a;
-      font-weight: 500;
-      transition: color 0.3s;
+      font-weight: 600;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: #000;
+      color: var(--branco);
     }
 
-    /* ====== HERO SECTION ====== */
+    /* Seção Hero (vídeo de fundo) */
     .hero {
       position: relative;
-      height: 100vh;
-      width: 100%;
+      height: 90vh;
       display: flex;
-      justify-content: center;
       align-items: center;
-      text-align: center;
-      color: #fff;
+      justify-content: flex-start;
+      color: white;
+      padding-left: 4%;
       overflow: hidden;
     }
 
@@ -73,146 +92,94 @@
       height: 100%;
       object-fit: cover;
       z-index: -1;
+      filter: brightness(0.7);
     }
 
     .hero-content {
-      background: rgba(0, 43, 122, 0.55);
-      padding: 40px;
-      border-radius: 15px;
-      animation: fadeIn 2s ease-in-out;
+      max-width: 600px;
+      animation: fadeInUp 1.2s ease;
     }
 
     .hero h2 {
       font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 15px;
+      line-height: 1.2;
+      color: var(--branco);
     }
 
     .hero p {
-      font-size: 1.1rem;
-      margin-bottom: 25px;
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: var(--branco);
     }
 
-    .hero button {
-      background-color: #ffd100;
-      color: #002b7a;
+    .cta-btn {
+      background-color: var(--amarelo);
+      color: var(--azul);
+      padding: 0.9rem 1.5rem;
+      font-weight: bold;
       border: none;
-      padding: 15px 30px;
-      font-size: 1.1rem;
-      font-weight: 600;
       border-radius: 8px;
+      margin-top: 1.5rem;
       cursor: pointer;
-      transition: 0.3s;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      font-size: 1rem;
+      transition: all 0.3s ease;
     }
 
-    .hero button:hover {
-      background-color: #ffcc00;
+    .cta-btn:hover {
+      background-color: var(--azul);
+      color: var(--branco);
       transform: scale(1.05);
     }
 
-    /* ====== SERVIÇOS ====== */
+    /* Seção Serviços */
     section {
-      padding: 100px 8% 60px;
+      padding: 4rem 10%;
       text-align: center;
     }
 
     section h3 {
       font-size: 2rem;
-      color: #002b7a;
-      margin-bottom: 40px;
+      margin-bottom: 2rem;
     }
 
     .servicos {
       display: flex;
-      justify-content: space-around;
       flex-wrap: wrap;
-      gap: 30px;
+      justify-content: center;
+      gap: 2rem;
     }
 
     .servico {
-      flex: 1;
-      min-width: 250px;
-      max-width: 300px;
-      background: #f8f9fa;
-      padding: 25px;
+      flex: 1 1 250px;
+      background-color: #f7f7f7;
       border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-      animation: fadeInUp 1.5s ease;
+      padding: 2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
     }
 
     .servico:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+      transform: translateY(-5px);
     }
 
     .servico h4 {
-      color: #002b7a;
-      margin-top: 10px;
-      font-size: 1.2rem;
+      margin-top: 1rem;
+      color: var(--azul);
     }
 
-    .servico p {
-      color: #333;
-      margin-top: 10px;
-      font-size: 0.95rem;
+    /* Ícones simples */
+    .icon {
+      font-size: 2.5rem;
+      color: var(--amarelo);
     }
 
-    /* ====== ORÇAMENTO ====== */
-    .orcamento {
-      background-color: #ffd100;
-      color: #002b7a;
-      padding: 60px 8%;
-      text-align: center;
-      animation: fadeIn 2s ease;
-    }
-
-    .orcamento h3 {
-      margin-bottom: 25px;
-      font-size: 1.8rem;
-    }
-
-    .orcamento form {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .orcamento input,
-    .orcamento select {
-      padding: 12px;
-      border: none;
-      border-radius: 6px;
-      width: 250px;
-      font-size: 1rem;
-    }
-
-    .orcamento button {
-      padding: 12px 25px;
-      border: none;
-      background-color: #002b7a;
-      color: #fff;
-      font-weight: bold;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .orcamento button:hover {
-      background-color: #001f5c;
-    }
-
-    /* ====== WHATSAPP FLUTUANTE ====== */
-    .whatsapp-float {
+    /* WhatsApp Flutuante */
+    .whatsapp-btn {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      bottom: 25px;
+      right: 25px;
       background-color: #25D366;
-      color: #fff;
+      color: white;
       border-radius: 50%;
       width: 60px;
       height: 60px;
@@ -220,44 +187,64 @@
       align-items: center;
       justify-content: center;
       font-size: 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      z-index: 1000;
-      transition: transform 0.3s;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+      z-index: 999;
     }
 
-    .whatsapp-float:hover {
+    .whatsapp-btn:hover {
       transform: scale(1.1);
     }
 
-    /* ====== RODAPÉ ====== */
+    /* Rodapé */
     footer {
-      background-color: #002b7a;
-      color: #fff;
+      background-color: var(--azul);
+      color: var(--branco);
       text-align: center;
-      padding: 25px;
-      font-size: 0.9rem;
+      padding: 1.5rem;
+      margin-top: 3rem;
     }
 
-    /* ====== ANIMAÇÕES ====== */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
+    /* Animação */
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 0.5rem;
+      }
+      .hero h2 {
+        font-size: 1.8rem;
+      }
+      .servicos {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>WR CAÇAMBAS  (31) 3434-6976</h1>
+    <div class="logo">
+      WR CAÇAMBAS
+      <div class="telefone">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        <a href="https://wa.me/553134346976" target="_blank" style="text-decoration:none; color:var(--azul);">(31) 3434-6976</a>
+      </div>
+    </div>
     <nav>
       <a href="#servicos">Serviços</a>
       <a href="#sobre">Sobre</a>
@@ -267,13 +254,12 @@
 
   <section class="hero">
     <video autoplay muted loop playsinline>
-      <source src="./videos/VideoTopCompleto.mp4" type="video/mp4">
-      Seu navegador não suporta vídeos HTML5.
+      <source src="VideoTop.mp4" type="video/mp4">
     </video>
     <div class="hero-content">
       <h2>Locação de Caçambas em Belo Horizonte</h2>
       <p>Desde 2001 oferecendo agilidade, segurança e responsabilidade no descarte de resíduos na região norte de BH.</p>
-      <button onclick="document.querySelector('#orcamento').scrollIntoView({behavior:'smooth'})">Peça seu Orçamento</button>
+      <button class="cta-btn" onclick="window.location.href='#orcamento'">Peça seu Orçamento</button>
     </div>
   </section>
 
@@ -281,42 +267,30 @@
     <h3>Nossos Serviços</h3>
     <div class="servicos">
       <div class="servico">
+        <div class="icon">🟨</div>
         <h4>Locação de Caçamba 5m³</h4>
         <p>Caçambas padrão em Belo Horizonte, ideais para entulho, reformas, limpeza de quintais e obras.</p>
       </div>
       <div class="servico">
+        <div class="icon">🎧</div>
         <h4>Atendimento Local</h4>
-        <p>Serviço rápido e eficiente em toda a região norte de Belo Horizonte. Entrega e retirada ágil.</p>
+        <p>Serviço rápido e eficiente em toda a região norte de BH. Entrega e retirada ágil.</p>
       </div>
       <div class="servico">
+        <div class="icon">📄</div>
         <h4>Orçamento Personalizado</h4>
         <p>O valor depende do endereço e tipo de resíduo descartado. Solicite um orçamento sem compromisso!</p>
       </div>
     </div>
   </section>
 
-  <section class="orcamento" id="orcamento">
-    <h3>Peça seu Orçamento</h3>
-    <form>
-      <input type="text" placeholder="Nome" required>
-      <input type="text" placeholder="Endereço da obra" required>
-      <select required>
-        <option value="">Tipo de resíduo</option>
-        <option value="entulho">Entulho</option>
-        <option value="terra">Terra</option>
-        <option value="misto">Misto</option>
-      </select>
-      <input type="text" placeholder="Telefone / WhatsApp" required>
-      <button type="submit">Solicitar Orçamento</button>
-    </form>
-  </section>
+  <footer id="orcamento">
+    <p>© 2025 WR Caçambas Ltda - Todos os direitos reservados.</p>
+  </footer>
 
-  <a href="https://wa.me/5531999999999?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20de%20caçamba." class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
+  <!-- Botão WhatsApp Flutuante -->
+  <a href="https://wa.me/553134346976" class="whatsapp-btn" target="_blank" aria-label="Fale conosco no WhatsApp">
     💬
   </a>
-
-  <footer>
-    © 2025 WR Caçambas LTDA — Todos os direitos reservados.
-  </footer>
 </body>
 </html>

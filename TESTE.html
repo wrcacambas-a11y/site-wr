@@ -1,137 +1,271 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WR Caçambas Ltda | Locação de Caçamba em BH</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WR Caçambas - Locação em Belo Horizonte</title>
   <style>
-    html { scroll-behavior: smooth; }
-    video {
-      object-fit: cover;
+    /* ====== ESTILO GERAL ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #002b7a;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #ffd100;
+      padding: 15px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
       width: 100%;
-      height: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: #002b7a;
+      font-weight: 700;
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #002b7a;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    /* ====== HERO SECTION ====== */
+    .hero {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .hero video {
       position: absolute;
       top: 0;
       left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       z-index: -1;
+    }
+
+    .hero-content {
+      background: rgba(0, 43, 122, 0.45);
+      padding: 40px;
+      border-radius: 15px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+    }
+
+    .hero button {
+      background-color: #ffd100;
+      color: #002b7a;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: #ffcc00;
+    }
+
+    /* ====== SERVIÇOS ====== */
+    section {
+      padding: 100px 8% 60px;
+      text-align: center;
+    }
+
+    section h3 {
+      font-size: 2rem;
+      color: #002b7a;
+      margin-bottom: 40px;
+    }
+
+    .servicos {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .servico {
+      flex: 1;
+      min-width: 250px;
+      max-width: 300px;
+      background: #f8f9fa;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .servico:hover {
+      transform: translateY(-5px);
+    }
+
+    .servico h4 {
+      color: #002b7a;
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+
+    .servico p {
+      color: #333;
+      margin-top: 10px;
+      font-size: 0.95rem;
+    }
+
+    /* ====== ORÇAMENTO ====== */
+    .orcamento {
+      background-color: #ffd100;
+      color: #002b7a;
+      padding: 60px 8%;
+      text-align: center;
+    }
+
+    .orcamento h3 {
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+    }
+
+    .orcamento form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .orcamento input,
+    .orcamento select {
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      width: 250px;
+      font-size: 1rem;
+    }
+
+    .orcamento button {
+      padding: 12px 25px;
+      border: none;
+      background-color: #002b7a;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .orcamento button:hover {
+      background-color: #001f5c;
+    }
+
+    /* ====== RODAPÉ ====== */
+    footer {
+      background-color: #002b7a;
+      color: #fff;
+      text-align: center;
+      padding: 25px;
+      font-size: 0.9rem;
     }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
-  <!-- Header -->
-  <header class="bg-yellow-500 text-white shadow-lg fixed w-full top-0 z-10">
-    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
-      <h1 class="text-2xl font-bold">WR Caçambas Ltda</h1>
-      <nav class="space-x-4 hidden md:block">
-        <a href="#servicos" class="hover:underline">Serviços</a>
-        <a href="#sobre" class="hover:underline">Sobre</a>
-        <a href="#contato" class="hover:underline">Orçamento</a>
-      </nav>
-    </div>
+<body>
+  <header>
+    <h1>WR CAÇAMBAS</h1>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#orcamento">Orçamento</a>
+    </nav>
   </header>
 
-  <!-- Hero Section com vídeo -->
-  <section class="relative h-[90vh] flex items-center justify-center text-center text-white overflow-hidden">
-    <video autoplay muted loop playsinline poster="" class="absolute top-0 left-0 w-full h-full object-cover">
-      <source src="./videos/wr-cacambas.mp4" type="video/mp4">
+  <section class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="./videos/VideoTopCompleto.mp4" type="video/mp4">
       Seu navegador não suporta vídeos HTML5.
     </video>
-
-    <div class="bg-black bg-opacity-50 w-full h-full absolute top-0 left-0"></div>
-
-    <div class="relative z-10 px-6">
-      <h2 class="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">Locação de Caçambas em Belo Horizonte</h2>
-      <p class="text-lg md:text-xl mb-6 max-w-2xl mx-auto drop-shadow-md">
-        Desde 2001 oferecendo agilidade, segurança e responsabilidade no descarte de resíduos na região norte de BH.
-      </p>
-      <a href="#contato" class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition">
-        Peça seu Orçamento
-      </a>
+    <div class="hero-content">
+      <h2>Locação de Caçambas em Belo Horizonte</h2>
+      <p>Desde 2001 oferecendo agilidade, segurança e responsabilidade no descarte de resíduos na região norte de BH.</p>
+      <button onclick="document.querySelector('#orcamento').scrollIntoView({behavior:'smooth'})">Peça seu Orçamento</button>
     </div>
   </section>
 
-  <!-- Serviços -->
-  <section id="servicos" class="max-w-6xl mx-auto py-16 px-6">
-    <h3 class="text-3xl font-bold text-center mb-12 text-gray-900">Nossos Serviços</h3>
-
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white shadow-lg p-6 rounded-2xl text-center">
-        <img src="https://cdn-icons-png.flaticon.com/512/3134/3134486.png" alt="Caçamba" class="w-20 mx-auto mb-4">
-        <h4 class="text-xl font-semibold mb-2">Locação de Caçamba 5m³</h4>
+  <section id="servicos">
+    <h3>Nossos Serviços</h3>
+    <div class="servicos">
+      <div class="servico">
+        <h4>Locação de Caçamba 5m³</h4>
         <p>Caçambas padrão em Belo Horizonte, ideais para entulho, reformas, limpeza de quintais e obras.</p>
       </div>
-
-      <div class="bg-white shadow-lg p-6 rounded-2xl text-center">
-        <img src="https://cdn-icons-png.flaticon.com/512/2239/2239954.png" alt="Atendimento" class="w-20 mx-auto mb-4">
-        <h4 class="text-xl font-semibold mb-2">Atendimento Local</h4>
+      <div class="servico">
+        <h4>Atendimento Local</h4>
         <p>Serviço rápido e eficiente em toda a região norte de Belo Horizonte. Entrega e retirada ágil.</p>
       </div>
-
-      <div class="bg-white shadow-lg p-6 rounded-2xl text-center">
-        <img src="https://cdn-icons-png.flaticon.com/512/992/992700.png" alt="Orçamento" class="w-20 mx-auto mb-4">
-        <h4 class="text-xl font-semibold mb-2">Orçamento Personalizado</h4>
+      <div class="servico">
+        <h4>Orçamento Personalizado</h4>
         <p>O valor depende do endereço e tipo de resíduo descartado. Solicite um orçamento sem compromisso!</p>
       </div>
     </div>
   </section>
 
-  <!-- Sobre -->
-  <section id="sobre" class="bg-yellow-50 py-16 px-6">
-    <div class="max-w-5xl mx-auto text-center">
-      <h3 class="text-3xl font-bold text-gray-900 mb-6">Sobre a WR Caçambas</h3>
-      <p class="text-lg text-gray-700 leading-relaxed">
-        A <strong>WR Caçambas Ltda</strong> atua desde <strong>2001</strong> no mercado de locação de caçambas estacionárias em <strong>Belo Horizonte</strong>. 
-        Somos especialistas na coleta e transporte de resíduos, oferecendo soluções rápidas e seguras para obras, reformas e limpezas. 
-        Nosso compromisso é com o meio ambiente e com o cliente, garantindo um atendimento ágil e preços justos.
-      </p>
-    </div>
-  </section>
-
-  <!-- Contato / Orçamento -->
-  <section id="contato" class="max-w-5xl mx-auto py-16 px-6">
-    <h3 class="text-3xl font-bold text-center mb-8 text-gray-900">Peça seu Orçamento</h3>
-    <form class="bg-white shadow-lg rounded-2xl p-8 space-y-4 max-w-2xl mx-auto">
-      <div>
-        <label class="block font-semibold mb-1">Nome</label>
-        <input type="text" class="w-full border border-gray-300 rounded-lg p-2" placeholder="Seu nome completo" required>
-      </div>
-      <div>
-        <label class="block font-semibold mb-1">Endereço da obra</label>
-        <input type="text" class="w-full border border-gray-300 rounded-lg p-2" placeholder="Ex: Bairro X, Região Norte - BH" required>
-      </div>
-      <div>
-        <label class="block font-semibold mb-1">Tipo de resíduo</label>
-        <select class="w-full border border-gray-300 rounded-lg p-2">
-          <option>Entulho</option>
-          <option>Reforma Residencial</option>
-          <option>Limpeza de quintal</option>
-          <option>Outros</option>
-        </select>
-      </div>
-      <div>
-        <label class="block font-semibold mb-1">Telefone / WhatsApp</label>
-        <input type="tel" class="w-full border border-gray-300 rounded-lg p-2" placeholder="(31) 9xxxx-xxxx" required>
-      </div>
-      <button class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg w-full transition">
-        Solicitar Orçamento
-      </button>
+  <section class="orcamento" id="orcamento">
+    <h3>Peça seu Orçamento</h3>
+    <form>
+      <input type="text" placeholder="Nome" required>
+      <input type="text" placeholder="Endereço da obra" required>
+      <select required>
+        <option value="">Tipo de resíduo</option>
+        <option value="entulho">Entulho</option>
+        <option value="terra">Terra</option>
+        <option value="misto">Misto</option>
+      </select>
+      <input type="text" placeholder="Telefone / WhatsApp" required>
+      <button type="submit">Solicitar Orçamento</button>
     </form>
   </section>
 
-  <!-- Botão flutuante WhatsApp -->
-  <a href="https://wa.me/5531999999999?text=Olá,+quero+um+orçamento+da+WR+Caçambas" 
-     class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg transition z-20"
-     target="_blank" aria-label="WhatsApp">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="w-8 h-8">
-  </a>
-
-  <!-- Rodapé -->
-  <footer class="bg-gray-800 text-gray-200 py-6 text-center mt-10">
-    <p>© 2025 WR Caçambas Ltda — Todos os direitos reservados</p>
-    <p class="text-sm">Atendimento: Região Norte de Belo Horizonte | CNPJ: 00.000.000/0000-00</p>
+  <footer>
+    © 2025 WR Caçambas LTDA — Todos os direitos reservados.
   </footer>
-
 </body>
 </html>

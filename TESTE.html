@@ -7,12 +7,21 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     html { scroll-behavior: smooth; }
+    video {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
   <!-- Header -->
-  <header class="bg-yellow-500 text-white shadow-lg">
+  <header class="bg-yellow-500 text-white shadow-lg fixed w-full top-0 z-10">
     <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
       <h1 class="text-2xl font-bold">WR Caçambas Ltda</h1>
       <nav class="space-x-4 hidden md:block">
@@ -23,11 +32,20 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="bg-cover bg-center text-white py-24" style="background-image: url('https://images.unsplash.com/photo-1608501078713-6c9f1b3e2d6f');">
-    <div class="bg-black bg-opacity-60 py-16 px-6 md:px-12 text-center">
-      <h2 class="text-4xl font-extrabold mb-4">Locação de Caçambas em Belo Horizonte</h2>
-      <p class="text-lg mb-6 max-w-2xl mx-auto">Desde 2001, oferecendo agilidade, segurança e responsabilidade no descarte de resíduos na região norte de BH.</p>
+  <!-- Hero Section com vídeo -->
+  <section class="relative h-[90vh] flex items-center justify-center text-center text-white overflow-hidden">
+    <video autoplay muted loop playsinline>
+      <source src="videos/wr-cacambas.mp4" type="video/mp4">
+      Seu navegador não suporta vídeos HTML5.
+    </video>
+
+    <div class="bg-black bg-opacity-50 w-full h-full absolute top-0 left-0"></div>
+
+    <div class="relative z-10 px-6">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">Locação de Caçambas em Belo Horizonte</h2>
+      <p class="text-lg md:text-xl mb-6 max-w-2xl mx-auto drop-shadow-md">
+        Desde 2001 oferecendo agilidade, segurança e responsabilidade no descarte de resíduos na região norte de BH.
+      </p>
       <a href="#contato" class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition">
         Peça seu Orçamento
       </a>

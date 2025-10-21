@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WR CAÇAMBAS LTDA</title>
   <style>
+    /* ====== GERAL ====== */
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,7 +14,9 @@
       overflow-x: hidden;
     }
 
-    /* Header */
+    a { text-decoration: none; color: inherit; }
+
+    /* ====== HEADER ====== */
     header {
       background-color: #FFD100;
       display: flex;
@@ -27,7 +30,7 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
-    header .logo {
+    .logo {
       font-size: 1.4rem;
       font-weight: bold;
       color: #002B7A;
@@ -36,24 +39,67 @@
       gap: 10px;
     }
 
-    header .logo i {
+    .logo i {
       color: #25D366;
       font-size: 1.2rem;
     }
 
-    header nav a {
-      margin-left: 25px;
-      text-decoration: none;
-      color: #002B7A;
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    nav a {
       font-weight: 600;
       transition: color 0.3s;
     }
 
-    header nav a:hover {
+    nav a:hover {
       color: #fff;
     }
 
-    /* Hero section */
+    /* ====== MENU HAMBURGUER ====== */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      cursor: pointer;
+      width: 28px;
+      height: 24px;
+    }
+
+    .menu-toggle div {
+      background-color: #002B7A;
+      height: 3px;
+      margin: 4px 0;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #FFD100;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    /* ====== HERO SECTION ====== */
     .hero {
       position: relative;
       height: 85vh;
@@ -111,7 +157,7 @@
       transform: scale(1.05);
     }
 
-    /* Services */
+    /* ====== SERVICES ====== */
     .services {
       text-align: center;
       padding: 60px 10%;
@@ -160,7 +206,7 @@
       font-size: 0.95rem;
     }
 
-    /* WhatsApp floating button */
+    /* ====== WHATSAPP FLOAT ====== */
     .whatsapp-float {
       position: fixed;
       width: 60px;
@@ -181,6 +227,7 @@
       transform: scale(1.1);
     }
 
+    /* ====== FOOTER ====== */
     footer {
       background-color: #FFD100;
       color: #002B7A;
@@ -197,6 +244,7 @@
 
     @media (max-width: 768px) {
       .hero h2 { font-size: 2rem; }
+      .hero-content { max-width: 90%; }
       .service-items { flex-direction: column; align-items: center; }
     }
   </style>
@@ -205,17 +253,22 @@
 
 <body>
 
+  <!-- HEADER -->
   <header>
     <div class="logo">
       WR CAÇAMBAS &nbsp; | &nbsp; <i class="fab fa-whatsapp"></i> (31) 3434-6976
     </div>
-    <nav>
+    <div class="menu-toggle" id="menu-toggle">
+      <div></div><div></div><div></div>
+    </div>
+    <nav id="menu">
       <a href="#servicos">Serviços</a>
       <a href="#sobre">Sobre</a>
       <a href="#orcamento">Orçamento</a>
     </nav>
   </header>
 
+  <!-- HERO SECTION -->
   <section class="hero">
     <img src="https://raw.githubusercontent.com/wrcacambas-a11y/site-wr/refs/heads/main/video/Video%20Top%20com%20a%20saida%20do%20caminhao%20para%20frente%20em%20gif.gif" alt="Caminhão WR Caçambas em operação">
     <div class="hero-content">
@@ -225,6 +278,7 @@
     </div>
   </section>
 
+  <!-- SERVIÇOS -->
   <section id="servicos" class="services">
     <h3>Nossos Serviços</h3>
     <div class="service-items">
@@ -244,15 +298,4 @@
         <p>O valor depende do endereço e tipo de resíduo descartado. Solicite um orçamento sem compromisso!</p>
       </div>
     </div>
-  </section>
-
-  <footer>
-    © 2025 WR CAÇAMBAS LTDA - Belo Horizonte / MG | Desde 2001
-  </footer>
-
-  <a href="https://wa.me/55319934346976" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-</body>
-</html>
+  </sect

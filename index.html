@@ -11,21 +11,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
-        body { font-family: 'Roboto', sans-serif; }
-        .bg-alert { background-color: #ffcc00; color: #000; font-weight: bold; }
-        .hero-section .hero-section {
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('imagens/caminhao-1620-cacamba.png');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 100px 0;
-}3833-ffc6f78d504e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-size: cover; color: white; padding: 100px 0; }
-        .btn-whatsapp { background-color: #25d366; color: white; font-weight: bold; padding: 15px 30px; border-radius: 50px; font-size: 1.2rem; border: none; }
-        .btn-whatsapp:hover { background-color: #128c7e; color: white; }
-        .security-box { border: 2px solid #dc3545; border-radius: 10px; padding: 20px; background-color: #fff5f5; }
-        .card-cacamba { transition: transform 0.3s; }
-        .card-cacamba:hover { transform: translateY(-10px); }
-    </style>
+    body { font-family: 'Roboto', sans-serif; }
+    
+    /* Barra de Alerta amarela */
+    .bg-alert { background-color: #ffcc00; color: #000; font-weight: bold; }
+
+    /* SEÇÃO DA IMAGEM PRINCIPAL (CORRIGIDA) */
+    .hero-section {
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('imagens/caminhao-1620-cacamba.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        padding: 120px 0; /* Aumentei um pouco o espaço para a imagem aparecer melhor */
+        text-align: center;
+    }
+
+    .btn-whatsapp { background-color: #25d366; color: white; font-weight: bold; padding: 15px 30px; border-radius: 50px; font-size: 1.2rem; border: none; text-decoration: none; display: inline-block; }
+    .btn-whatsapp:hover { background-color: #128c7e; color: white; }
+    
+    .security-box { border: 2px solid #dc3545; border-radius: 10px; padding: 20px; background-color: #fff5f5; }
+    
+    .card-cacamba { transition: transform 0.3s; }
+    .card-cacamba:hover { transform: translateY(-10px); }
+</style>
 </head>
 <body>
 

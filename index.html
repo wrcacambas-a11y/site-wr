@@ -1,435 +1,206 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>WR Caçambas | Locação de Caçambas em Belo Horizonte</title>
-
     <meta name="description" content="Locação de caçambas em BH - Bairro Tupi A. Segurança total: Pagamento somente no ato da entrega!">
-
     
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-
-
     <style>
-
-    body { font-family: 'Roboto', sans-serif; }
-
+        /* Efeito de rolagem suave */
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Roboto', sans-serif; }
     
+        /* Barra de Alerta amarela */
+        .bg-alert { background-color: #ffcc00; color: #000; font-weight: bold; }
 
-    /* Barra de Alerta amarela */
+        /* SEÇÃO DA IMAGEM PRINCIPAL */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/caminhao-1620-cacamba.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
 
-    .bg-alert { background-color: #ffcc00; color: #000; font-weight: bold; }
-
-
-
-    /* SEÇÃO DA IMAGEM PRINCIPAL (CORRIGIDA) */
-
-    .hero-section {
-
-        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/caminhao-1620-cacamba.png');
-
-        background-size: cover;
-
-        background-position: center;
-
-        background-repeat: no-repeat;
-
-        color: white;
-
-        padding: 120px 0; /* Aumentei um pouco o espaço para a imagem aparecer melhor */
-
-        text-align: center;
-
-    }
-
-
-
-    .btn-whatsapp { background-color: #25d366; color: white; font-weight: bold; padding: 15px 30px; border-radius: 50px; font-size: 1.2rem; border: none; text-decoration: none; display: inline-block; }
-
-    .btn-whatsapp:hover { background-color: #128c7e; color: white; }
-
+        .btn-whatsapp { background-color: #25d366; color: white; font-weight: bold; padding: 15px 30px; border-radius: 50px; font-size: 1.2rem; border: none; text-decoration: none; display: inline-block; }
+        .btn-whatsapp:hover { background-color: #128c7e; color: white; }
     
-
-    .security-box { border: 2px solid #dc3545; border-radius: 10px; padding: 20px; background-color: #fff5f5; }
-
+        .security-box { border: 2px solid #dc3545; border-radius: 10px; padding: 20px; background-color: #fff5f5; }
     
+        .card-cacamba { transition: transform 0.3s; }
+        .card-cacamba:hover { transform: translateY(-10px); }
 
-    .card-cacamba { transition: transform 0.3s; }
-
-    .card-cacamba:hover { transform: translateY(-10px); }
-
-</style>
-
+        /* Estilização dos links do menu para manter o padrão */
+        .nav-link { font-weight: bold; color: #555 !important; margin: 0 10px; }
+        .nav-link:hover { color: #0d6efd !important; }
+    </style>
     <link rel="icon" type="image/png" href="images/favicon.png">
-
 </head>
-
 <body>
 
-
-
     <div class="bg-alert text-center py-2 sticky-top border-bottom border-dark">
-
         <div class="container">
-
             <i class="fas fa-exclamation-triangle"></i> ⚠️ AVISO: A WR CAÇAMBAS <strong>NUNCA</strong> PEDE PAGAMENTO ANTECIPADO. PAGUE SOMENTE NA ENTREGA!
-
         </div>
-
     </div>
 
-
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
-
-    <div class="container d-flex align-items-center py-2">
-
-        
-
-        <a class="navbar-brand d-flex align-items-center m-0" href="#" style="text-decoration: none;">
-
-            <img src="images/logotipo.png" alt="WR Caçambas" 
-
-                 style="height: 48px; width: auto; flex-shrink: 0; object-fit: contain;" 
-
-                 class="me-3">
-
-            <span class="fw-bold text-primary" style="font-size: 1.5rem; line-height: 1; letter-spacing: -0.5px;">
-
-                WR CAÇAMBAS
-
-            </span>
-
-        </a>
-
-
-
-        <div class="ms-auto d-flex align-items-center">
-
-            <span class="d-none d-md-inline me-4 fw-bold" style="color: #25D366; font-size: 1.1rem;">
-
-                (31) 3434-6976 <i class="fab fa-whatsapp"></i>
-
-            </span>
-
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+        <div class="container d-flex align-items-center py-2">
             
-
-            <a href="https://wa.me/553134346976" class="btn btn-success fw-bold px-3 shadow-sm">
-
-                WhatsApp Oficial
-
+            <a class="navbar-brand d-flex align-items-center m-0" href="#" style="text-decoration: none;">
+                <img src="images/logotipo.png" alt="WR Caçambas" 
+                     style="height: 48px; width: auto; flex-shrink: 0; object-fit: contain;" 
+                     class="me-3">
+                <span class="fw-bold text-primary" style="font-size: 1.5rem; line-height: 1; letter-spacing: -0.5px;">
+                    WR CAÇAMBAS
+                </span>
             </a>
 
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#seguranca">SEGURANÇA</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cacambas">CAÇAMBAS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#guia-uso">GUIA DE USO</a></li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <span class="d-none d-xl-inline me-4 fw-bold" style="color: #25D366; font-size: 1.1rem;">
+                        (31) 3434-6976 <i class="fab fa-whatsapp"></i>
+                    </span>
+                    <a href="https://wa.me/553134346976" class="btn btn-success fw-bold px-3 shadow-sm">
+                        WhatsApp Oficial
+                    </a>
+                </div>
+            </div>
+
         </div>
-
-
-
-    </div>
-
-</nav>
-
-
+    </nav>
 
     <section class="hero-section text-center">
-
         <div class="container">
-
             <h1 class="display-4 fw-bold mb-4">Locação de Caçambas em BH</h1>
-
             <p class="lead mb-5">Atuamos desde 2001 com agilidade e descarte responsável. <br> Atendemos o bairro Tupi A e toda região metropolitana.</p>
-
             <a href="https://wa.me/553134346976?text=Quero%20alugar%20uma%20caçamba" class="btn-whatsapp">
-
                 <i class="fab fa-whatsapp"></i> SOLICITAR ORÇAMENTO AGORA
-
             </a>
-
         </div>
-
     </section>
 
-
-
-    <section class="py-5 bg-white">
-
+    <section id="seguranca" class="py-5 bg-white">
         <div class="container text-center">
-
             <h2 class="fw-bold mb-4">Como alugar com Segurança?</h2>
-
             <div class="row g-4 justify-content-center">
-
                 <div class="col-md-8">
-
                     <div class="security-box">
-
                         <h4 class="text-danger fw-bold"><i class="fas fa-user-shield"></i> Protocolo Anti-Fraude WR</h4>
-
                         <ul class="text-start mt-3">
-
                             <li><strong>Pagamento Adiantado Zero:</strong> Você só paga quando a caçamba estiver instalada no endereço combinado.</li>
-
                             <li><strong>Confirmação de Dados:</strong> O Pix oficial é sempre em nome da empresa WR Caçambas.</li>
-
                             <li><strong>Frota Própria:</strong> Identifique nossos caminhões com o logo oficial na porta.</li>
-
                             <li><strong>Sede Física:</strong> Rua Nelson Hungria, 472 - Tupi A, Belo Horizonte.</li>
-
                         </ul>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
-
-
-    <section class="py-5 bg-light">
-
+    <section id="cacambas" class="py-5 bg-light">
         <div class="container text-center">
-
             <h2 class="fw-bold mb-5">Nossas Caçambas</h2>
-
             <div class="row g-4">
-
                 <div class="col-md-6">
-
                     <div class="card h-100 card-cacamba shadow-sm">
-
                         <div class="card-body text-center">
-
-    <img src="images/cacamba.png" alt="Locação de Caçamba" class="mb-3" style="width: 70px; height: auto;">
-
-    
-
-    <h5 class="card-title fw-bold">Locação de Caçambas</h5>
-
-    <p class="card-text">Atendemos com agilidade o bairro Tupi A, Pampulha e adjacências. Consulte disponibilidade para outros bairros de BH.</p>
-
+                            <img src="images/cacamba.png" alt="Locação de Caçamba" class="mb-3" style="width: 70px; height: auto;">
+                            <h5 class="card-title fw-bold">Locação de Caçambas</h5>
+                            <p class="card-text">Atendemos com agilidade o bairro Tupi A, Pampulha e adjacências.</p>
                             <h5 class="card-title fw-bold">Caçamba 5m³</h5>
-
                             <p class="card-text">Ideal para recolhimento do entulho de obra, terra e reformas residenciais. Capacidade para até 7 toneladas.</p>
-
                             <span class="badge bg-success">Disponível para Entrega</span>
-
                         </div>
-
                     </div>
-
                 </div>
-
                 <div class="col-md-6">
-
                     <div class="card h-100 card-cacamba shadow-sm">
-
                         <div class="card-body">
-
                             <i class="fas fa-recycle fa-3x text-primary mb-3"></i>
-
                             <h5 class="card-title fw-bold">Descarte Legalizado</h5>
-
                             <p class="card-text">Seguimos rigorosamente as normas da PBH e SLU para o descarte em bota-foras autorizados.</p>
-
-                            <span class="badge bg-info">Selo Sustentável</span>
-
+                            <span class="badge bg-info text-dark">Selo Sustentável</span>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
     <section id="guia-uso" class="py-5 bg-white">
-
-    <div class="container">
-
-        <div class="text-center mb-5">
-
-            <h2 class="fw-bold" style="color: #198754;">Guia de Orientação: Use Correto</h2>
-
-            <p class="text-muted fs-5">Siga nossas recomendações para garantir a segurança e agilidade no seu descarte.</p>
-
-        </div>
-
-
-
-        <div class="row align-items-center">
-
-            <div class="col-md-6 mb-4 text-center">
-
-                <img src="images/Orientacao.png" alt="Regras de Uso da Caçamba - WR Caçambas" class="img-fluid rounded shadow-sm">
-
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold" style="color: #198754;">Guia de Orientação: Use Correto</h2>
+                <p class="text-muted fs-5">Siga nossas recomendações para garantir a segurança e agilidade no seu descarte.</p>
             </div>
 
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 text-center">
+                    <img src="images/Orientacao.png" alt="Regras" class="img-fluid rounded shadow-sm">
+                </div>
 
-
-            <div class="col-md-6">
-
-                <div class="p-3">
-
-                    <div class="alert alert-info border-info mb-4">
-
-                        <strong><i class="fas fa-exclamation-triangle"></i> Atenção:</strong> Cargas em desacordo com este guia impedem a retirada e podem gerar taxas adicionais de readequação de carga.
-
+                <div class="col-md-6">
+                    <div class="p-3">
+                        <div class="alert alert-info border-info mb-4">
+                            <strong><i class="fas fa-exclamation-triangle"></i> Atenção:</strong> Cargas em desacordo impedem a retirada.
+                        </div>
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="fas fa-arrow-circle-right text-success mt-1 me-3"></i>
+                                <div><strong>Limite de Borda:</strong> O entulho deve ser nivelado até a borda superior.</div>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="fas fa-arrow-circle-right text-success mt-1 me-3"></i>
+                                <div><strong>Manobra:</strong> O local deve ter espaço livre para o caminhão (10-12m).</div>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="fas fa-arrow-circle-right text-success mt-1 me-3"></i>
+                                <div><strong>Proibidos:</strong> Lixo orgânico, resíduos químicos, pneus e lâmpadas.</div>
+                            </li>
+                        </ul>
                     </div>
-
-                    
-
-                    <ul class="list-unstyled">
-
-                        <li class="mb-3 d-flex align-items-start">
-
-                            <i class="fas fa-arrow-circle-right text-success mt-1 me-3"></i>
-
-                            <div>
-
-                                <strong>Limite de Borda:</strong> O entulho deve ser nivelado até a <strong>borda superior</strong> da caçamba. Isso evita o derramamento de materiais durante o transporte até o local do descarte.
-
-                            </div>
-
-                        </li>
-
-                        <li class="mb-3 d-flex align-items-start">
-
-                            <i class="fas fa-arrow-circle-right text-success mt-1 me-3"></i>
-
-                            <div>
-
-                                <strong>Manobra e Localização:</strong> O local escolhido para a caçamba deve ter espaço livre para o caminhão-truck (10-12m) e não pode ser movimentada após a colocação pelo nosso motorista.
-
-                            </div>
-
-                        </li>
-
-                        <li class="mb-3 d-flex align-items-start">
-
-                            <i class="fas fa-arrow-circle-right text-success mt-1 me-3"></i>
-
-                            <div>
-
-                                <strong>Materiais Proibidos:</strong> Lixo orgânico, resíduos químicos perigosos, pneus, lâmpadas e lixo eletrônico exigem descartes especiais e <strong>não podem</strong> ser colocados na caçamba.
-
-                            </div>
-
-                        </li>
-
-                    </ul>
-
                 </div>
-
             </div>
-
         </div>
+    </section>
 
-    </div>
-
-</section>
-
-    <section class="py-5 bg-light">
-
-    <div class="container">
-
-        <h2 class="text-center fw-bold mb-4">O que nossos clientes dizem</h2>
-
-        <div class="row">
-
-            <div class="col-md-4 mb-3">
-
-                <div class="card h-100 border-0 shadow-sm p-3">
-
-                    <div class="text-warning mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-
-                    <p class="fst-italic">"Serviço nota 10 no Tupi A. Caçamba entregue no horário e motorista muito educado."</p>
-
-                    <footer class="blockquote-footer mt-2">Avaliação via Google Maps</footer>
-
-                </div>
-
+    <footer class="bg-dark text-white py-5">
+        <div class="container text-center">
+            <h4 class="fw-bold mb-3">WR CAÇAMBAS</h4>
+            <p class="mb-2"><i class="fas fa-map-marker-alt text-danger me-2"></i> Rua Nelson Hungria, 472 - Tupi A, BH</p>
+            <p class="mb-4"><i class="fab fa-whatsapp text-success me-2"></i> (31) 3434-6976</p>
+            <hr class="border-secondary my-4">
+            <div class="small">
+                <p class="mb-2 text-white-50">© 2026 WR Caçambas - Todos os direitos reservados.</p>
+                <p class="fw-bold" style="color: #ffc107;">⚠️ Atenção: Pague somente na entrega.</p>
             </div>
-
-            </div>
-
-    </div>
-
-</section>
-
-
-
-   <footer class="bg-dark text-white py-5">
-
-    <div class="container text-center">
-
-        <h4 class="fw-bold mb-3">WR CAÇAMBAS</h4>
-
-        
-
-        <p class="mb-2">
-
-            <i class="fas fa-map-marker-alt text-danger me-2"></i> Rua Nelson Hungria, 472 - Tupi A, Belo Horizonte - MG
-
-        </p>
-
-        <p class="mb-4">
-
-            <i class="fab fa-whatsapp text-success me-2"></i> (31) 3434-6976
-
-        </p>
-
-
-
-        <hr class="border-secondary my-4">
-
-
-
-        <div class="small">
-
-            <p class="mb-2 text-white">© 2026 WR Caçambas - Todos os direitos reservados.</p>
-
-            
-
-            <p class="fw-bold" style="color: #ffc107; font-size: 1rem;">
-
-                <i class="fas fa-exclamation-triangle"></i> Atenção: Não aceite solicitações de pagamento via redes sociais ou Pix antecipado.
-
-            </p>
-
         </div>
+    </footer>
 
-    </div>
-
-</footer>
-
-
-
-    <a href="https://wa.me/553134346976" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 2px 2px 3px #999;z-index:100;" target="_blank">
-
+    <a href="https://wa.me/553134346976" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 2px 2px 3px #999;z-index:1000;" target="_blank">
         <i class="fab fa-whatsapp" style="margin-top:16px;"></i>
-
     </a>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 </html>
